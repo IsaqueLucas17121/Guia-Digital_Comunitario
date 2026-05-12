@@ -1,0 +1,304 @@
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.cabecario {
+  justify-content: space-around;
+  align-items: center;
+  display: flex;
+  padding: 10px;
+  background-color: white;
+  /* position: fixed; */
+}
+
+.seta {
+  font-size: 45px;
+  /* arrumar depois */
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.icone svg:hover {
+  fill: #007a3d;
+  cursor: pointer;
+}
+
+.inicio {
+  position: relative;
+  padding: 0;
+}
+
+.inicio img {
+  width: 100%;
+  height: 100%;
+}
+
+.caixa {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.2);
+  padding: 30px;
+  border-radius: 15px;
+  border: 3px solid white;
+}
+
+.brasil,
+.peru,
+.italia,
+.jordania,
+.india,
+.mexico {
+  width: 40%;
+  height: 800px;
+  position: relative;
+}
+
+.brasil_fundo,
+.peru_fundo,
+.italia_fundo,
+.china_fundo,
+.jordania_fundo,
+.india_fundo,
+.mexico_fundo {
+  display: flex;
+  margin-top: 10px;
+}
+.brasil_fundo img,
+.peru_fundo img,
+.italia_fundo img,
+.china_fundo img,
+.jordania_fundo img,
+.india_fundo img,
+.mexico_fundo img {
+  width: 60%;
+  height: 800px;
+}
+.brasil {
+  background: #019b3a;
+}
+
+.brasil_losan {
+  width: 300px;
+  height: 300px;
+  background: #fdde00;
+  position: absolute;
+  top: 33%;
+  left: 24%;
+  transform: translate(-50%, -50%);
+  transform: rotate(45deg);
+}
+
+.brasil img {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border-radius: 50%;
+}
+
+.peru {
+  background: #d91023;
+}
+
+.peru.ligado {
+  transform: rotate(0deg) translateY(0%);
+  opacity: 1;
+}
+
+.peru img {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.peru_faixa {
+  width: 200px;
+  height: 800px;
+  position: absolute;
+  background: white;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.italia {
+  background: #ce2b37;
+}
+
+.italia_faixa,
+.italia_faixa2,
+.mexico_faixa,
+.mexico_faixa2 {
+  width: 200px;
+  height: 800px;
+  position: absolute;
+  top: 0;
+  transform: translateX(-50%);
+}
+.italia_faixa {
+  background: #ffffff;
+  left: 50%;
+}
+.italia_faixa2 {
+  background: #009246;
+  left: 17%;
+}
+
+.china {
+  position: relative;
+  width: 40%;
+  height: 800px;
+}
+.china img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  object-position: 10%;
+}
+
+.jordania {
+  background: black;
+}
+
+.jordania_faixa,
+.jordania_faixa2,
+.india_faixa,
+.india_faixa2 {
+  width: 100%;
+  height: 275px;
+  position: absolute;
+  transform: translateY(-50%);
+}
+.jordania_faixa {
+  background: white;
+  left: 0;
+  top: 50%;
+}
+.jordania_faixa2 {
+  background: #007a3d;
+  left: 0;
+  top: 83%;
+}
+.jordania_tri {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+
+  width: 55%;
+  height: 100%;
+  background: #ce1126;
+  clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+}
+.estrela {
+  position: absolute;
+  left: 45%;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40%;
+  height: 20%;
+  background: white;
+
+  clip-path: polygon(
+    50% 0%,
+    58% 28%,
+    85% 15%,
+    72% 42%,
+    100% 50%,
+    72% 58%,
+    85% 85%,
+    58% 72%,
+    50% 100%,
+    42% 72%,
+    15% 85%,
+    28% 58%,
+    0% 50%,
+    28% 42%,
+    15% 15%,
+    42% 28%
+  );
+}
+
+.india {
+  background: #ff9932;
+}
+.india_faixa {
+  background: white;
+  top: 50%;
+  left: 0;
+}
+.india_faixa2 {
+  background: #128807;
+  top: 83%;
+  left: 0;
+}
+
+.india img {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+}
+
+.mexico {
+  background: #007a3d;
+}
+
+.mexico_faixa {
+  background: white;
+  left: 50%;
+}
+.mexico_faixa2 {
+  background: #ce1126;
+  left: 83%;
+}
+
+.mexico_faixa img {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ------------------- */
+
+.onda {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 300px;
+}
+
+/* Classe comum para as ondas */
+.wave {
+  animation: moveWave 6s linear infinite;
+}
+
+.wave2 {
+  animation: moveWave 10s linear infinite;
+}
+
+@keyframes moveWave {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1200px);
+  } /* largura do viewBox */
+}
