@@ -9,7 +9,29 @@ body {
   display: flex;
   padding: 10px;
   background-color: white;
-  /* position: fixed; */
+  z-index: 99;
+}
+.cabecario.seguir {
+  top: 0%;
+  left: 50%;
+  transform: translateX(-50%);
+  position: fixed;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  border: 3px solid white;
+}
+.cabecario.seguir * {
+  margin-left: 20px;
+}
+.cabecario svg {
+  padding: 0;
+}
+
+#coliseu,
+#petra,
+#itza {
+  transform: translateY(8px);
 }
 
 .seta {
