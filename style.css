@@ -3,31 +3,34 @@ body {
   margin: 0;
   box-sizing: border-box;
 }
+#sentinela {
+  height: 1px;
+}
 .cabecario {
   justify-content: space-around;
   align-items: center;
   display: flex;
   padding: 5px;
   z-index: 99;
+  transition: 0.5s all ease;
 }
-.cabecario.seguir {
+.cabecario.ativo {
   top: 0%;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 20%;
   position: fixed;
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.2);
   border-radius: 15px;
   border: 3px solid #ffffff;
-  transition: 0.5s all ease;
 }
-.cabecario.seguir * {
+.cabecario.ativo * {
   margin-left: 20px;
 }
 .cabecario svg {
   padding: 0;
   width: auto;
   height: 80px;
+  cursor: pointer;
 }
 
 #coliseu,
@@ -41,6 +44,9 @@ body {
   cursor: pointer;
   padding: 10px;
   border-radius: 50%;
+}
+.seta:hover {
+  color: #007a3d;
 }
 
 .icone svg:hover {
@@ -132,11 +138,6 @@ body {
   background: #d91023;
 }
 
-.peru.ligado {
-  transform: rotate(0deg) translateY(0%);
-  opacity: 1;
-}
-
 .peru img {
   width: 200px;
   height: 200px;
@@ -156,14 +157,14 @@ body {
 }
 
 .italia {
-  background: #ce2b37;
+  background: #009246;
 }
 
 .italia_faixa,
 .italia_faixa2,
 .mexico_faixa,
 .mexico_faixa2 {
-  width: 33%;
+  width: 33.3%;
   height: 100%;
   position: absolute;
   top: 0;
@@ -174,28 +175,32 @@ body {
   left: 50%;
 }
 .italia_faixa img {
-  position: absolute;
+  background-color: #fdde00;
   width: 10vw;
   height: 10vw;
   border-radius: 50%;
   z-index: 98;
+}
+.pizza {
+  position: absolute;
   top: 50%;
   left: 50%;
-  animation: rolar 8s linear infinite;
   transform: translate(-50%, -50%);
-  background-color: #fdde00;
+}
+#elemento3.ligado {
+  animation: rolar 8s linear infinite;
 }
 @keyframes rolar {
   0% {
-    transform: rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg);
   }
   100% {
-    transform: rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg);
   }
 }
 .italia_faixa2 {
-  background: #009246;
-  left: 17%;
+  background: #ce2b37;
+  left: 83.4%;
 }
 
 .china {
@@ -290,8 +295,8 @@ body {
 
 .india img {
   position: absolute;
-  width: 150px;
-  height: 150px;
+  width: 10rem;
+  height: auto;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
@@ -312,15 +317,13 @@ body {
 }
 
 .mexico_faixa img {
-  width: 200px;
-  height: 200px;
+  width: 75%;
+  height: auto;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-/* ------------------- */
 
 .onda {
   position: absolute;
@@ -329,12 +332,10 @@ body {
   height: 300px;
 }
 
-/* Classe comum para as ondas */
-.wave {
+#elemento1.ligado {
   animation: moveWave 6s linear infinite;
 }
-
-.wave2 {
+#elemento2.ligado {
   animation: moveWave 10s linear infinite;
 }
 

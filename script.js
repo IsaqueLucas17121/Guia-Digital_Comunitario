@@ -1,11 +1,64 @@
+let sentinela = document.getElementById("sentinela");
 let cabecario = document.querySelector(".cabecario");
+let voltar = document.querySelector(".seta");
+let rolar = document.querySelectorAll(".icone");
 
-window.addEventListener("scroll", () => {
-  let tela = window.scrollY;
+let lista = [
+  ".peru",
+  ".italia",
+  ".brasil",
+  ".china",
+  ".jordania",
+  ".india",
+  ".mexico",
+];
 
-  if (tela > 132) {
-    cabecario.classList.add("seguir");
-  } else {
-    cabecario.classList.remove("seguir");
-  }
+rolar.forEach((roll, index) => {
+  roll.addEventListener("click", () => {
+    let alvo = document.querySelector(lista[index]);
+
+    if (alvo) {
+      alvo.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  });
 });
+
+voltar.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+const observerEle = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("ligado");
+    } else {
+      entry.target.classList.remove("ligado");
+    }
+  });
+});
+
+for (let i = 1; i <= 3; i++) {
+  const elemento = document.getElementById(`elemento${i}`);
+
+  observerEle.observe(elemento);
+}
+
+const observerTop = new IntersectionObserver((entries) => {
+  (entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      cabecario.classList.remove("ativo");
+    } else {
+      cabecario.classList.add("ativo");
+    }
+  }),
+    {
+      threshold: 0.1,
+    });
+});
+
+observerTop.observe(sentinela);
