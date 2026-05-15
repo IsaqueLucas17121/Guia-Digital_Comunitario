@@ -1,16 +1,11 @@
-const box = document.querySelector(".peru");
+let cabecario = document.querySelector(".cabecario");
 
-const observer = new IntersectionObserver(
-  (entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        box.classList.add("ligado");
-      }
-    });
-  },
-  {
-    threshold: 0.5,
-  },
-);
+window.addEventListener("scroll", () => {
+  let tela = window.scrollY;
 
-observer.observe(box);
+  if (tela > 132) {
+    cabecario.classList.add("seguir");
+  } else {
+    cabecario.classList.remove("seguir");
+  }
+});

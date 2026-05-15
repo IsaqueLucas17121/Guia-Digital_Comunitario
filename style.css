@@ -7,8 +7,7 @@ body {
   justify-content: space-around;
   align-items: center;
   display: flex;
-  padding: 10px;
-  background-color: white;
+  padding: 5px;
   z-index: 99;
 }
 .cabecario.seguir {
@@ -19,13 +18,16 @@ body {
   backdrop-filter: blur(10px);
   background: rgba(255, 255, 255, 0.2);
   border-radius: 15px;
-  border: 3px solid white;
+  border: 3px solid #ffffff;
+  transition: 0.5s all ease;
 }
 .cabecario.seguir * {
   margin-left: 20px;
 }
 .cabecario svg {
   padding: 0;
+  width: auto;
+  height: 80px;
 }
 
 #coliseu,
@@ -35,8 +37,7 @@ body {
 }
 
 .seta {
-  font-size: 45px;
-  /* arrumar depois */
+  font-size: clamp(1rem, 2vw, 3rem);
   cursor: pointer;
   padding: 10px;
   border-radius: 50%;
@@ -67,6 +68,7 @@ body {
   padding: 30px;
   border-radius: 15px;
   border: 3px solid white;
+  font-size: clamp(0.5rem, 2vw, 1rem);
 }
 
 .brasil,
@@ -105,8 +107,8 @@ body {
 }
 
 .brasil_losan {
-  width: 300px;
-  height: 300px;
+  width: 20rem;
+  height: 20rem;
   background: #fdde00;
   position: absolute;
   top: 33%;
@@ -121,7 +123,7 @@ body {
   position: absolute;
   top: 52%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(-45deg);
   background-color: white;
   border-radius: 50%;
 }
@@ -144,8 +146,8 @@ body {
   transform: translate(-50%, -50%);
 }
 .peru_faixa {
-  width: 200px;
-  height: 800px;
+  width: 33%;
+  height: 100%;
   position: absolute;
   background: white;
   top: 0;
@@ -161,8 +163,8 @@ body {
 .italia_faixa2,
 .mexico_faixa,
 .mexico_faixa2 {
-  width: 200px;
-  height: 800px;
+  width: 33%;
+  height: 100%;
   position: absolute;
   top: 0;
   transform: translateX(-50%);
@@ -170,6 +172,26 @@ body {
 .italia_faixa {
   background: #ffffff;
   left: 50%;
+}
+.italia_faixa img {
+  position: absolute;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 50%;
+  z-index: 98;
+  top: 50%;
+  left: 50%;
+  animation: rolar 8s linear infinite;
+  transform: translate(-50%, -50%);
+  background-color: #fdde00;
+}
+@keyframes rolar {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 .italia_faixa2 {
   background: #009246;
