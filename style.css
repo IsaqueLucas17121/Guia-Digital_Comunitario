@@ -159,6 +159,18 @@ body {
   border-radius: 50%;
 }
 
+.gif_brasil {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  display: none;
+}
+#elemento4 {
+  display: block;
+}
+
 /* Peru */
 .peru {
   background: #d91023;
