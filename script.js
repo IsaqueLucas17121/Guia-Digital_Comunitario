@@ -2,15 +2,16 @@ let sentinela = document.getElementById("sentinela");
 let cabecario = document.querySelector(".cabecario");
 let voltar = document.querySelector(".seta");
 let rolar = document.querySelectorAll(".icone");
+let barra = document.querySelector(".barra");
 
 let lista = [
-  ".peru",
-  ".italia",
-  ".brasil",
-  ".china",
-  ".jordania",
-  ".india",
-  ".mexico",
+  ".peru_fundo_img",
+  ".italia_fundo_img",
+  ".brasil_fundo_img",
+  ".china_fundo_img",
+  ".jordania_fundo_img",
+  ".india_fundo_img",
+  ".mexico_fundo_img",
 ];
 
 rolar.forEach((roll, index) => {
@@ -62,3 +63,7 @@ const observerTop = new IntersectionObserver((entries) => {
 });
 
 observerTop.observe(sentinela);
+
+barra.addEventListener("click", () => {
+  cabecario.classList.add("block");
+});
