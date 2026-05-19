@@ -43,7 +43,7 @@ const observerEle = new IntersectionObserver((entries) => {
   });
 });
 
-for (let i = 1; i <= 4; i++) {
+for (let i = 1; i <= 7; i++) {
   const elemento = document.getElementById(`elemento${i}`);
 
   observerEle.observe(elemento);
