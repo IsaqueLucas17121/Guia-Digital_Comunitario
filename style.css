@@ -129,7 +129,7 @@ body {
 .jordania_fundo_img,
 .india_fundo_img,
 .mexico_fundo_img {
-  width: 60%;
+  width: 100%;
   height: 800px;
   object-fit: cover;
 }
@@ -540,12 +540,93 @@ body {
   opacity: 1;
 }
 
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  position: absolute;
+  z-index: 99;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.star {
+  color: #ccc;
+  transition: 0.2s;
+}
+
+.star.active {
+  color: gold;
+}
+
+.resultado {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  background: #007bff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.margin_img {
+  position: relative;
+  width: 60%;
+  height: 800px;
+}
+
 /* ============================================================
    MEDIA QUERIES - RESPONSIVIDADE
    ============================================================ */
 
 /* Tablets e Telas Médias (até 1024px) */
 @media screen and (max-width: 1024px) {
+  .card {
+    padding: 25px 15px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .star {
+    font-size: 2.5rem;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 12px;
+  }
+
+  .resultado {
+    font-size: 1rem;
+  }
   .moon,
   .sun {
     width: 50px;
@@ -576,6 +657,10 @@ body {
   .india_fundo_img,
   .mexico_fundo_img {
     height: 600px;
+  }
+  .margin_img {
+    height: 600px;
+    width: 100%;
   }
 
   .brasil_losan {

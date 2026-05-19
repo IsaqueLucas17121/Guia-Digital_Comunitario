@@ -67,3 +67,18 @@ observerTop.observe(sentinela);
 barra.addEventListener("click", () => {
   cabecario.classList.add("block");
 });
+
+const stars = document.querySelectorAll(".star");
+let avaliacao = 0;
+
+stars.forEach((star) => {
+  star.addEventListener("click", () => {
+    avaliacao = star.getAttribute("data-value");
+
+    stars.forEach((s) => s.classList.remove("active"));
+
+    for (let i = 0; i < avaliacao; i++) {
+      stars[i].classList.add("active");
+    }
+  });
+});

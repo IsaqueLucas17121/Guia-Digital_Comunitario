@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="PR-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="img/icone.png" />
+    <title>Avaliação</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: #f4f4f4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card" style="top: 50%">
+      <h2>Avalie este lugar!</h2>
+
+      <div class="stars">
+        <span class="star" data-value="1">★</span>
+        <span class="star" data-value="2">★</span>
+        <span class="star" data-value="3">★</span>
+        <span class="star" data-value="4">★</span>
+        <span class="star" data-value="5">★</span>
+      </div>
+
+      <button onclick="enviarAvaliacao()">Enviar Avaliação</button>
+      <a href="index.html"><button>Voltar</button></a>
+
+      <div class="resultado" id="resultado"></div>
+    </div>
+    <script>
+      const stars = document.querySelectorAll(".star");
+      let avaliacao = 0;
+
+      stars.forEach((star) => {
+        star.addEventListener("click", () => {
+          avaliacao = star.getAttribute("data-value");
+
+          stars.forEach((s) => s.classList.remove("active"));
+
+          for (let i = 0; i < avaliacao; i++) {
+            stars[i].classList.add("active");
+          }
+        });
+      });
+
+      function enviarAvaliacao() {
+        const resultado = document.getElementById("resultado");
+
+        if (avaliacao == 0) {
+          resultado.innerHTML = "Escolha uma nota!";
+          resultado.style.color = "red";
+        } else {
+          resultado.innerHTML = `Você avaliou com ${avaliacao} estrela(s)!`;
+          resultado.style.color = "green";
+        }
+      }
+    </script>
+  </body>
+</html>
